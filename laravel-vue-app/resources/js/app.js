@@ -8,11 +8,12 @@ import VuetifyTestComponent from "./components/VuetifyTestComponent"
 
 
 import VueRouter from 'vue-router';
+
 import HeaderComponent from './components/HeaderComponent'
-import TaskListComponent from './components/TaskListComponent'
-import TaskShowComponent from './components/TaskShowComponent'
-import TaskCreateComponent from './components/TaskCreateComponent'
-import TaskEditComponent from "./components/TaskEditComponent"
+import TaskListComponent from './components/Task/TaskListComponent'
+import TaskShowComponent from './components/Task/TaskShowComponent'
+import TaskCreateComponent from './components/Task/TaskCreateComponent'
+import TaskEditComponent from "./components/Task/TaskEditComponent"
 
 /**
  * First we will load all of this project's JavaScript dependencies which
