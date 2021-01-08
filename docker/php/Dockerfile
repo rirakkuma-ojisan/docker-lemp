@@ -14,7 +14,13 @@ RUN apt-get update \
   git \
   zip \
   unzip \
+  vim \
   && docker-php-ext-install pdo_mysql bcmath
+
+# Xdebug
+RUN pecl install xdebug && \
+  docker-php-ext-enable xdebug && \
+  echo xdebug.mode=debug"\n"xdebug.start_with_request=yes"\n"xdebug.client_host=host.docker.internal"\n"xdebug.log=/tmp/xdebug.log >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 WORKDIR /var/www/html
 
